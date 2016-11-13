@@ -12,7 +12,7 @@ class Node():
         self.next = None
 
     def __str__(self):
-        return str(self.value)
+        return str(self.value)           #self.value可以输出字符串
 
 
     #方法一:循环迭代
