@@ -2,7 +2,6 @@
 """
    反转链表
         方法一:循环迭代
-        方法二:递归
 """
 
 
@@ -51,15 +50,3 @@ if __name__ == "__main__":
         print newhead
         newhead = newhead.next
 
-    #方法二:递归
-
-    def reverse_recursion(self,head):
-        if head == None or head.next == None:
-            return head
-
-        newhead = reverse_recursion(head.next)
-
-        head.next.next = head.next
-        head.next = None
-
-        return newhead
