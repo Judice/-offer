@@ -9,16 +9,16 @@ class Solution():
         new_list=[]
         stop = len(nums)-1
         while i <= stop:
-            j = i +1
-            if i == stop:
+            j = i +1                    # 创建第二个指针
+            if i == stop:               # if语句用于添加最后一个元素
                 new_list.append(nums[i])
-                i += 1
+                i += 1                  # 跳出while循环
             else:
                 if nums[i] == nums[j]:
                     while j <= stop and  nums[i] == nums[j]:
                         j += 1
                 new_list.append(nums[i])
-                i = j
+                i = j                     # 传递指针
         return new_list
 
 if __name__ == "__main__":
