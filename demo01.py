@@ -7,23 +7,13 @@
 
 
 class Solution():
-    def find(self, array, target):
-        col = len(array[0])
+    def search(self):
         row = len(array)
-        if target < array[0][0]:
-            return False
-        if target > array[row-1][col-1]:
-            return False
-
-        i = 0
-        j = col -1
-        while i < row and j >=0 :
-            if array[i][j] == target:
-                return True
-            elif target > array[i][j]:
-                 i += 1
-            else:
-                 j -= 1
+        for i in xrange(row):
+            col = len(array[i])
+            for j in xrange(col):
+                if target == array[i][j]:
+                    return True
         return False
 
 
@@ -35,4 +25,4 @@ if __name__ == "__main__":
             [6, 9, 11, 14, 18],
             [7, 10, 12,15, 19]]
     s = Solution()
-    print(s.find(array,8))
+    print s.find(array,8)
