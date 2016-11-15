@@ -26,14 +26,19 @@ class Solution():
                 left = mid + 1
         return nums[right]
 
-if __name__ == "__main__":
-    s = Solution()
-    nums01 = [1,0,1,1,1]
-    print s.search(nums01)
-    nums02 = [3,4,5,6,7,8,9,1,2]
-    print s.search(nums02)
+#或者
+class Solution:
+    def search(self, rotateArray):
+        if len(rotateArray) == 0:
+            return 0
+        n = rotateArray[0]
+        for i in range(1,len(rotateArray)):
+            if n > rotateArray[i]:
+                n = rotateArray[i]
+                break
+        return n
 
 #或者开挂
-    def search(self,RotateArray):
+    def search(self, RotateArray):
          return min(RotateArray)
 
