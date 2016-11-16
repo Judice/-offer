@@ -11,16 +11,16 @@ class Node():
         return str(self.value)
 
 
-def reverse_recursion(head):
-    if not head or not head.next:
-        return head
+    def reverse_recursion(self,head):
+        if not head or not head.next:
+           return head
 
-    newhead = reverse_recursion(head.next)
+        newhead = self.reverse_recursion(head.next)
 
-    head.next.next = head
-    head.next = None
+        head.next.next = head
+        head.next = None
 
-    return newhead
+        return newhead
 
 if __name__ == "__main__":
     three = Node(3)
@@ -34,7 +34,8 @@ if __name__ == "__main__":
     head = Node(0)
     head.next = one
 
-    new_head = reverse_recursion(head)
+    s = Node(head.value)
+    new_head = s.reverse_recursion(head)
     while new_head:
         print new_head
         new_head = new_head.next
