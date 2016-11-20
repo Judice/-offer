@@ -13,9 +13,10 @@ class Queue():
 
     def appendTail(self, n):
         self.stack1.append(n)
+        return self.stack1
 
     def deleteHead(self):
-        while self.stack1 != []:
-            self.stack2.append(self.stack1.pop())
-
+        if self.stack2 == []:
+            while self.stack1:
+                 self.stack2.append(self.stack1.pop())
         return self.stack2.pop()
