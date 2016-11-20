@@ -12,6 +12,6 @@ class Solution:
         l = []
         head = listNode
         while head:
-            l.insert(0, head.val)
+            l.insert(0, head.val)   #insert函数需要输入索引
             head = head.next
         return l
