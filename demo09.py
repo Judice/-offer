@@ -12,7 +12,7 @@ class Solution():
             j = i +1                    # 创建第二个指针
             if i == stop:               # if语句用于添加最后一个元素
                 new_list.append(nums[i])
-                i += 1                  # 跳出while循环
+                break                  # 跳出while循环
             else:
                 if nums[i] == nums[j]:
                     while j <= stop and  nums[i] == nums[j]:
