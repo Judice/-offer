@@ -28,11 +28,11 @@ class LeftMostAppearance:
         while left<=right:
             mid = left+(right-left)/2
             if arr[mid] == num:
-                while arr[mid] == num:
+                while arr[mid-1] == num:
                     mid -= 1
-                return mid+1
+                return mid
             elif arr[mid]>num:
-                right = mid-1
+                right = mid
             else:
                 left = mid+1
         return -1
